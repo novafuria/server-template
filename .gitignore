@@ -1,0 +1,4 @@
+# Ignore Visual Studio temporary files
+.[Tt]mp
+.[Tt]emp
+.env
