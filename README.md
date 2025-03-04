@@ -45,7 +45,7 @@
 
 A minimal and flexible template to quickly deploy a simple server using Docker Compose.
 
-**🎊 Based on [mauroalderete/base-template](https://github.com/mauroalderete/server-template) 🎊**.
+**🎊 Based on [mauroalderete/server-template](https://github.com/mauroalderete/server-template) 🎊**.
 
 Use this template as a starting point for creating personalized server configurations across your network with ease. Includes essential components to set up and manage a lightweight server for various machines, such as Raspberry Pi, personal computers, or other servers in your network.
 
