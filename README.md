@@ -92,13 +92,27 @@ For that the discovery service works and it be able to find the services running
 For default, the network is called `myserver`. You can change this name in the `docker-compose.yaml` file.
 
 ```yaml
+services:
+  <service_name>:
+    networks:
+      - myserver
+
+...
+
 networks:
-  default:
-    name: myserver
+  myserver:
     external: true
 ```
 
 If you change the network name, you need to change the network name in the `docker-compose.yaml` file of the services that you want to deploy in the same network.
+
+If you change the network name, you need to change the network name in the docker-compose.yaml file of the services that you want to deploy in the same network. Additionaly, you need edit the ./traefik/traefik.yml file to change the network for Docker provider.
+
+```yaml
+providers:
+  docker:
+    network: myserver
+```
 
 ### mDNS
 
@@ -203,9 +217,15 @@ A fixed service is a service that you want to run in your server and always be a
 First, you need run the service in the same network that the discovery service is running. You can use the `networks` section in the `docker-compose.yaml` file to add the service to the network.
 
 ```yaml
+services:
+  <service_name>:
+    networks:
+      - myserver
+
+...
+
 networks:
-  default:
-    name: myserver
+  myserver:
     external: true
 ```
 
@@ -256,9 +276,15 @@ A discovery service is a service that you want to run in your server and be disc
 First, you need run the service in the same network that the discovery service is running. You can use the `networks` section in the `docker-compose.yaml` file to add the service to the network.
 
 ```yaml
+services:
+  <service_name>:
+    networks:
+      - myserver
+
+...
+
 networks:
-  default:
-    name: myserver
+  myserver:
     external: true
 ```
 
