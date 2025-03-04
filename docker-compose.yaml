@@ -10,7 +10,7 @@ services:
       - "traefik.http.routers.traefik.tls=true"
       - "traefik.http.routers.traefik-insecure.rule=Host(`traefik.myserver.local`)"
       - "traefik.http.routers.traefik-insecure.entrypoints=web"
-      - "traefik.http.services.traefik.loadbalancer.myserver.port=8080"
+      - "traefik.http.services.traefik.loadbalancer.server.port=8080"
       - "traefik.http.middlewares.testheader.headers.accesscontrolallowmethods=GET,OPTIONS,PUT"
       - "traefik.http.middlewares.testheader.headers.accesscontrolallowheaders=*"
       - "traefik.http.middlewares.testheader.headers.accesscontrolalloworiginlist=https://myserver.local,http://myserver.local"
